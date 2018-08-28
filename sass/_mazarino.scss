@@ -1,0 +1,23 @@
+.mazarino {
+	background: $color-dark;
+	color: $color-white;
+
+	.mazarino-logo {
+		margin: 20px 0;
+	}
+}
+
+.download-pdf {
+	display: block;
+	transition: color 0.2s linear;
+
+	img {
+		max-width: 30px;
+		vertical-align: middle;
+	}
+
+	&:hover {
+		border: 0;
+		color: darken($color-main, 15%);
+	}
+}

@@ -1,0 +1,57 @@
+.elegancia {
+	background: url('../images/elegancia-bg.jpg') no-repeat center;
+	background-size: cover;
+
+	.container {
+		@include breakpoint(desktop) {
+			min-height: 750px;
+		}
+	}
+}
+
+.elegancia-box {
+	max-width: 80%;
+	overflow: hidden;
+	margin: 30px auto;
+	align-self: center;
+	position: relative;
+	padding: 80px 30px 40px;
+	background: $color-white;
+
+	@include breakpoint(desktop) {
+		margin: 0;
+		height: 480px;
+		max-width: 370px;
+		padding: 80px 50px 60px;
+	}
+
+	&:before,
+	&:after {
+		content:'';
+		position: absolute;
+		border: 60px solid transparent;
+	}
+
+	&:before {
+		border-bottom-color: $color-gold;
+		transform: rotate(-45deg);
+		top: -60px;
+		left: -60px;
+	}
+
+	&:after {
+		border-top-color: $color-gold;
+		transform: rotate(-45deg);
+		bottom: -60px;
+		right: -60px;
+	}
+
+	.pleca {
+		background: $color-gold;
+	}
+
+	.slideshow-btn-cocina,
+	.slideshow-btn-closet {
+		font-weight: 400;
+	}
+}

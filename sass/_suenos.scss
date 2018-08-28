@@ -1,0 +1,115 @@
+.suenos {
+	width: 100%;
+	min-height: 100vh;
+	color: $color-white;
+
+	@include breakpoint(desktop) {
+		min-height: 580px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	a {
+		border: 0;
+		opacity: 1;
+		color: $color-white;
+		display: inline-block;
+		transition: opacity 0.2s linear;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	img {
+		width: 30px;
+		height: 30px;
+		vertical-align: bottom;
+	}
+
+	.half {
+		@include breakpoint(desktop) {
+			width: 50%;
+		}
+	}
+
+	.txt {
+		background: $color-dark;
+		color: $color-white;
+
+		@include breakpoint(desktop) {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+
+	.container-half {
+		width: 90%;
+		margin: 0 auto;
+
+		@include breakpoint(desktop) {
+			margin: 0;
+			max-width: 535px;
+			width: calc(100% - 60px);
+			padding: 40px 40px 40px 0;
+		}
+	}
+
+	.mapa-wrapper {
+		padding-top: 0;
+		position: relative;
+	}
+
+	.mapa {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60vh;
+
+		@inlude breakpoint(desktop) {
+			height: 100%;
+			position: absolute;
+		}
+	}
+
+	.info-mapa {
+		height: auto;
+		padding: 20px 30px;
+		background: $color-main;
+		width: calc(100% - 60px);
+
+		@include breakpoint(desktop) {
+			left: 0;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+
+	.info-ubicacion {
+		display: block;
+		overflow: auto;
+
+		img {
+			float: left;
+			height: 40px;
+			margin-right: 10px;
+		}
+
+		.ubicacion-txt {
+			float: left;
+			width: calc(100% - 45px);
+			margin-bottom: 10px;
+		}
+	}
+
+	.info-telefono {
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+
+	.info-social {
+		display: inline-block;
+	}
+}

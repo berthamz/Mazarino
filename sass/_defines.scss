@@ -1,0 +1,24 @@
+// VARIABLES //
+$font: 'Josefin Sans', sans-serif;
+
+$txt-s: 14px;
+$txt-r: 20px;
+$txt-m: 28px;
+$txt-l: 38px;
+
+$color-main:	#e42c42;
+$color-black:	#1e0508;
+$color-white:	#fff;
+$color-dark:	#221f1f;
+$color-grey:	#444142;
+$color-light:	#797879;
+$color-gold:	#bcab79;
+
+
+// MIXINS //
+
+@mixin breakpoint($point, $value: 0) {
+	@if $point == desktop {
+		@media (min-width: 768px) { @content; }
+	}
+}

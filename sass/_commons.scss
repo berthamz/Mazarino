@@ -1,0 +1,183 @@
+body {
+	margin: 0;
+	font-weight: 300;
+	font-size: $txt-r;
+	line-height: $txt-r*1.3;
+	font-family: $font;
+	color: $color-dark;
+	letter-spacing: 0.7pt;
+}
+
+h1 {
+	margin: 0;
+	font-size: $txt-l/1.3;
+	font-weight: 400;
+	line-height: $txt-l;
+	letter-spacing: 1.7pt;
+	text-transform: uppercase;
+	transition: color 0.2s linear, font-size 0.5s ease;
+
+
+	@include breakpoint(desktop) {
+		font-size: $txt-l;
+		line-height: $txt-l*1.5;
+	}
+
+	.container:hover &,
+	.container-half:hover & {
+		@include breakpoint(desktop) {
+			font-size: $txt-l*1.05;
+		}
+	}
+}
+
+h2 {
+	font-size: $txt-m/1.1;
+	font-weight: 300;
+
+	@include breakpoint(desktop) {
+		font-size: $txt-m;
+	}
+}
+
+a {
+	cursor: pointer;
+	color: $color-main;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom-color linear 0.2s;
+
+	&:hover {
+		border-bottom-color: inherit;
+	}
+}
+
+p {
+	margin: 25px 0;
+}
+
+.color-maz {
+	color: $color-main;
+}
+
+.pleca {
+	width: 20px;
+	height: 3px;
+	margin: 15px 0 25px;
+	background: $color-main;
+}
+
+.tag {
+	margin: 0 auto;
+	height: 130px;
+	width: 80px;
+	background: $color-main;
+	color: $color-white;
+	text-align: center;
+	padding: 20px 15px;
+	font-size: $txt-s*1.2;
+	letter-spacing: 0;
+	line-height: $txt-r*1.1;
+	box-shadow: inset 0 14px 20px -10px $color-black;
+	border-bottom-left-radius: 60px;
+	border-bottom-right-radius: 60px;
+	transition: background 0.2s linear, 
+		padding-top 0.2s linear,
+		margin-bottom 0.2s linear;
+
+	@include breakpoint(desktop) {
+		margin: 0;
+	}
+
+	img {
+		width: 50px;
+		margin-bottom: 10px;
+	}
+
+	&:hover {
+		@include breakpoint(desktop) {
+			padding-top: 30px;
+			background: darken($color-main, 15%);
+		}
+	}
+}
+
+.container {
+	width: 90%;
+	max-width: 1150px;
+	margin: 0 auto;
+	min-height: 100vh;
+	padding-bottom: 1px;
+
+	@include breakpoint(desktop) {
+		min-height: 580px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.half {
+	padding: 20px 0;
+
+	@include breakpoint(desktop) {
+		width: 45%;
+		padding: 50px 0;
+	}
+}
+
+header {
+	background: $color-main;
+
+	.container {
+		min-height: 65px;
+		text-align: center;
+		padding-top: 15px;
+
+		@include breakpoint(desktop) {
+			padding: 0;
+		}
+	}
+
+	.top-logo,
+	.top-slogan {
+		display: block;
+		margin: 0 auto;
+		max-width: 45%;
+		min-width: 280px;
+
+		@include breakpoint(desktop) {
+			margin: 0;
+		}
+	}
+
+	.top-logo {
+		margin-bottom: 5px;
+
+		@include breakpoint(desktop) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+footer {
+	padding: 40px 0;
+	text-align: center;
+	background: $color-white;
+
+	.bottom-logo,
+	.bottom-slogan {
+		margin: 0 auto;
+		max-width: 65%;
+		display: block;
+	}
+
+	.bottom-logo {
+		width: 360px;
+	}
+
+	.bottom-slogan {
+		width: 265px;
+		margin-top: 40px;
+	}
+}

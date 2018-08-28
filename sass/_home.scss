@@ -1,0 +1,50 @@
+.home {
+	background: url('../images/home-bg.jpg') no-repeat center;
+	background-size: cover;
+
+	.container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		min-height: calc(100vh - 80px);
+
+		@include breakpoint(desktop) {
+			min-height: 600px;
+		}
+	}
+
+
+	&:hover {
+
+		h1 {
+			font-size: $txt-l*1.05;
+			color: lighten($color-grey, 10%);
+		}
+	}
+
+
+	.frase {
+		text-align: center;
+	}
+
+	h1 {
+		margin-top: 40px;
+		color: $color-grey;
+		transition: color 0.2s linear, font-size 0.5s ease;
+	}
+
+	h2 {
+		max-width: 550px;
+		color: $color-light;
+		margin: 0 auto 50px;
+	}
+
+	img {
+		width: 85px;
+	}
+
+	.pleca {
+		margin: 15px auto 25px;
+	}
+}
