@@ -57,8 +57,8 @@
 						<img src="images/galeria-mazarino/500x500-Cocina1.jpg" alt="Cocina 1 de Mazarino" />
 						<img src="images/galeria-mazarino/500x500-Cocina4.jpg" alt="Cocina 2 de Mazarino" />
 					</div>
-					<div class="js-carousel-prev btn prev">prev</div>
-					<div class="js-carousel-next btn next">next</div>
+					<div class="js-carousel-prev btn prev"></div>
+					<div class="js-carousel-next btn next"></div>
 				</div>
 			</div>
 		</div>
@@ -74,8 +74,8 @@
 				<div class="pleca"></div>
 				<p>Diseño europeo que combina estética y funcionalidad, para convertir cada espacio de tu casa. En Mazarino encuentras un equipo de arquitectos especializados en diseño interior, siempre listos para darle forma a tus ideas.</p>
 				<p>
-					Conoce la <a href="#" class="slideshow-btn-cocina">cocina</a> de tus sueños <br>
-					Encuentra el <a href="#" class="slideshow-btn-closet">clóset</a> perfecto
+					Conoce la <span class="slideshow-btn-cocina">cocina</span> de tus sueños <br>
+					Encuentra el <span class="slideshow-btn-closet">clóset</span> perfecto
 				</p>
 			</div>
 		</div>
@@ -88,7 +88,7 @@
 					Garantía <br>de <b>5 años*</b>
 				</div>
 				<div class="video">
-					<!--iframe width="100%" height="260" src="https://www.youtube.com/embed/YAD0a6wWFrI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe-->
+					<iframe width="100%" height="260" src="https://www.youtube.com/embed/GBfoRXKtMTk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="half half-first">
@@ -141,33 +141,47 @@
 		<img src="images/mazarino-logo-color.svg" alt="Mazarino Logo" class="bottom-logo">
 		<img src="images/cocinasyclosets.svg" alt="Cocinas y Clósets" class="bottom-slogan">
 	</footer>
-	<div class="fullscreen-overlay">
+	<div class="fullscreen-overlay fullscreen-cocina">
 		<div id="slideshow-cocina" class="slideshow-fullscreen">
 			<div class="js-carousel-viewer"></div>
 			<div class="js-carousel-items">
-				<img src="images/galeria-cocina/1000x1000-Cocina1.jpg" alt="Cocina de Mazarino" title="Cocina combinada de alacenas con alto brillo blanco y gabinetes color Roble Santana. Cubierta de granito Itaunas. Luz led debajo de las alacenas y jaladera tipo Gola italiana." />
-				<img src="images/galeria-cocina/1000x1000-Cocina2.jpg" alt="Cocina de Mazarino" title="Cocina de puerta Alder tipo ¨shaker¨ color blanco con detalles de Cedro Mara Avejentado. Cubierta de cuarzo color Carrara e iluminación led."/>
-				<img src="images/galeria-cocina/1000x1000-Cocina3.jpg" alt="Cocina de Mazarino" title="Cocina color Teka Ártico combinada con alacenas alto brillo blanco. Cubierta de cuarzo blanco marca Dupont e iluminación led debajo de alacenas."/>
+				<div class="item-wrapper">
+					<img src="images/galeria-cocina/1000x1000-Cocina1.jpg" alt="Cocina de Mazarino" title="Cocina combinada de alacenas con alto brillo blanco y gabinetes color Roble Santana. Cubierta de granito Itaunas. Luz led debajo de las alacenas y jaladera tipo Gola italiana." />
+					<div class="img-title">Cocina combinada de alacenas con alto brillo blanco y gabinetes color Roble Santana. Cubierta de granito Itaunas. Luz led debajo de las alacenas y jaladera tipo Gola italiana.</div>
+				</div>
+				<div class="item-wrapper">
+					<img src="images/galeria-cocina/1000x1000-Cocina2.jpg" alt="Cocina de Mazarino" title="Cocina de puerta Alder tipo ¨shaker¨ color blanco con detalles de Cedro Mara Avejentado. Cubierta de cuarzo color Carrara e iluminación led."/>
+					<div class="img-title">Cocina de puerta Alder tipo ¨shaker¨ color blanco con detalles de Cedro Mara Avejentado. Cubierta de cuarzo color Carrara e iluminación led.</div>
+				</div>
+				<div class="item-wrapper">
+					<img src="images/galeria-cocina/1000x1000-Cocina3.jpg" alt="Cocina de Mazarino" title="Cocina color Teka Ártico combinada con alacenas alto brillo blanco. Cubierta de cuarzo blanco marca Dupont e iluminación led debajo de alacenas."/>
+					<div class="img-title">Cocina color Teka Ártico combinada con alacenas alto brillo blanco. Cubierta de cuarzo blanco marca Dupont e iluminación led debajo de alacenas.</div>
+				</div>
 			</div>
 			<div class="js-carousel-btn btn"></div>
-			<div class="js-carousel-prev btn prev">prev</div>
-			<div class="js-carousel-next btn next">next</div>
 		</div>
-
+		<div class="slideshow-close">+</div>
+	</div>
+	<div class="fullscreen-overlay fullscreen-closet">
 		<div id="slideshow-closet" class="slideshow-fullscreen">
 			<div class="js-carousel-viewer"></div>
 			<div class="js-carousel-items">
-				<img src="images/galeria-closet/1000x1000-Closet1.jpg" alt="Clóset de Mazarino" title="Closet color Larisina blanco con jaladeras tubulares y espejos biselados en medio." />
-				<img src="images/galeria-closet/1000x1000-Closet2.jpg" alt="Clóset de Mazarino" title="Vestidor color Teka Ártico con iluminación led." />
-				<img src="images/galeria-closet/1000x1000-Closet3.jpg" alt="Clóset de Mazarino" title="Closet blanco alto brillo con sistema push to open en puertas e iluminación led." />
+				<div class="item-wrapper">
+					<img src="images/galeria-closet/1000x1000-Closet1.jpg" alt="Clóset de Mazarino" title="Closet color Larisina blanco con jaladeras tubulares y espejos biselados en medio." />
+					<div class="img-title">Closet color Larisina blanco con jaladeras tubulares y espejos biselados en medio.</div>
+				</div>
+				<div class="item-wrapper">				
+					<img src="images/galeria-closet/1000x1000-Closet2.jpg" alt="Clóset de Mazarino" title="Vestidor color Teka Ártico con iluminación led." />
+					<div class="img-title">Vestidor color Teka Ártico con iluminación led.</div>
+				</div>
+				<div class="item-wrapper">
+					<img src="images/galeria-closet/1000x1000-Closet3.jpg" alt="Clóset de Mazarino" title="Closet blanco alto brillo con sistema push to open en puertas e iluminación led." />
+					<div class="img-title">Closet blanco alto brillo con sistema push to open en puertas e iluminación led.</div>
+				</div>
 			</div>
 			<div class="js-carousel-btn btn"></div>
-			<div class="js-carousel-prev btn prev">prev</div>
-			<div class="js-carousel-next btn next">next</div>
 		</div>
-
-
-
+		<div class="slideshow-close">+</div>
 	</div>
 </body>
 </html>

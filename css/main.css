@@ -222,7 +222,14 @@ footer {
     background: #bcab79; }
   .elegancia-box .slideshow-btn-cocina,
   .elegancia-box .slideshow-btn-closet {
-    font-weight: 400; }
+    font-weight: 400;
+    cursor: pointer;
+    color: #e42c42;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color linear 0.2s; }
+    .elegancia-box .slideshow-btn-cocina:hover,
+    .elegancia-box .slideshow-btn-closet:hover {
+      border-bottom-color: inherit; }
 
 .todalavida {
   background: url("../images/todalavida-bg.jpg") center no-repeat;
@@ -355,5 +362,128 @@ footer {
     margin-bottom: 10px; }
   .suenos .info-social {
     display: inline-block; }
+
+.slideshow-mazarino {
+  width: calc(100% - 70px);
+  height: 350px;
+  margin: 0 auto;
+  max-width: 460px;
+  position: relative;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .slideshow-mazarino {
+      height: 460px; } }
+  .slideshow-mazarino .js-button-layer {
+    width: calc(100% + 70px);
+    top: calc(50% - 17px);
+    left: -35px;
+    display: flex;
+    justify-content: space-between; }
+  .slideshow-mazarino .prev,
+  .slideshow-mazarino .next {
+    width: 0;
+    height: 0;
+    border: 17px solid transparent; }
+  .slideshow-mazarino .prev {
+    border-right-color: #e42c42;
+    margin-left: -10px; }
+  .slideshow-mazarino .next {
+    border-left-color: #e42c42;
+    margin-right: -10px; }
+  .slideshow-mazarino img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover; }
+    @media (min-width: 768px) {
+      .slideshow-mazarino img {
+        height: 460px; } }
+
+.fullscreen-overlay {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+  .fullscreen-overlay .slideshow-fullscreen {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+  .fullscreen-overlay .js-carousel-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 3vh;
+    width: 90vw !important;
+    height: 90vw !important;
+    overflow: visible !important; }
+    @media (min-width: 768px) {
+      .fullscreen-overlay .js-carousel-viewer {
+        width: 95vh !important;
+        height: 95vh !important; } }
+    .fullscreen-overlay .js-carousel-viewer .item-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100% !important;
+      height: 100% !important; }
+  .fullscreen-overlay img {
+    object-fit: contain;
+    width: 100% !important;
+    height: 100% !important; }
+  .fullscreen-overlay .img-title {
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    position: absolute;
+    bottom: -10px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.6); }
+  .fullscreen-overlay .js-button-layer {
+    order: 2;
+    width: 100%;
+    bottom: 12px;
+    margin-top: 15px;
+    margin-bottom: auto;
+    position: relative !important; }
+    .fullscreen-overlay .js-button-layer .js-carousel-btns {
+      display: flex;
+      justify-content: center; }
+    .fullscreen-overlay .js-button-layer .btn {
+      width: 15px;
+      height: 15px;
+      border-radius: 100%;
+      background: #e42c42;
+      margin: 0 12px;
+      cursor: pointer;
+      transition: background 0.2s linear; }
+      .fullscreen-overlay .js-button-layer .btn.selected {
+        background: #797879; }
+      .fullscreen-overlay .js-button-layer .btn:hover {
+        background: #ed707f; }
+  .fullscreen-overlay .slideshow-close {
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 140px;
+    font-weight: 400;
+    line-height: 80px;
+    position: absolute;
+    color: #e42c42;
+    transform: rotate(45deg);
+    transition: color 0.2s linear; }
+    .fullscreen-overlay .slideshow-close:hover {
+      color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

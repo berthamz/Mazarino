@@ -1,0 +1,161 @@
+.slideshow-mazarino {
+	width:  calc(100% - 70px);
+	height: 350px;
+	margin: 0 auto;
+	max-width:460px;
+	position: relative;
+	margin-bottom: 30px;
+
+	@include breakpoint(desktop) {
+		height: 460px;
+	}
+
+	.js-button-layer {
+		width: calc(100% + 70px);
+		top: calc(50% - 17px);
+		left: -35px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.prev,
+	.next {
+		width: 0;
+		height: 0;
+		border: 17px solid transparent;
+	}
+
+	.prev {
+		border-right-color: $color-main;
+		margin-left: -10px;
+	}
+	.next {
+		border-left-color: $color-main;
+		margin-right: -10px;
+	}
+
+	img {
+		height: 350px;
+		width: 100%;
+		object-fit: cover;
+
+		@include breakpoint(desktop) {
+			height: 460px;
+		}
+	}
+}
+
+.fullscreen-overlay {
+	background: rgba(0,0,0,0.85);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	.slideshow-fullscreen {
+		width: 100vw;
+		height: 100vh;
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.js-carousel-viewer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 90%;
+		max-height: 90%;
+		margin-top: 3vh;
+		width: 90vw !important;
+		height: 90vw !important;
+		overflow: visible !important;
+
+		@include breakpoint(desktop) {
+			width: 95vh !important;
+			height: 95vh !important;
+		}
+
+		.item-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center; 
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+
+	img {
+		object-fit: contain;
+		width: 100% !important;
+		height: 100% !important;
+	}
+
+	.img-title {
+		text-align: center;
+		font-size: $txt-s;
+		line-height: 16px;
+		color: $color-white;
+		position: absolute;
+		bottom: -10px;
+		padding: 5px 10px;
+		border-radius: 7px;
+		background: rgba(0,0,0,0.6);
+	}
+
+	.js-button-layer {
+		order: 2;
+		width: 100%;
+		bottom: 12px;
+		margin-top: 15px;
+		margin-bottom: auto;
+		position: relative !important;
+
+		.js-carousel-btns {
+			display: flex;
+			justify-content: center;
+		}
+
+		.btn {
+			width: 15px;
+			height: 15px;
+			border-radius: 100%;
+			background: $color-main;
+			margin: 0 12px;
+			cursor: pointer;
+			transition: background 0.2s linear;
+
+			&.selected {
+				background: $color-light;
+			}
+
+			&:hover {
+				background: lighten($color-main, 15%);
+			}
+		}
+	}
+
+	.slideshow-close {
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		font-size: 140px;
+		font-weight: 400;
+		line-height: 80px;
+		position: absolute;
+		color: $color-main;
+		transform: rotate(45deg);
+		transition: color 0.2s linear;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+}
+

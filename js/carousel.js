@@ -34,7 +34,7 @@ dom structures inside desired carousel.
 If something is not working, please let me know! Thanks!
 */
 var carousel = {
-    tweenSpeed      : 1000,
+    tweenSpeed      : 500,
     tweenHold       : 5000,
     tweenType       : 'slide',
     labels          : {
